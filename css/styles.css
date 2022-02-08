@@ -1,0 +1,119 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --green: hsl(179, 100%, 13%);
+    --white: #fff;
+    --t-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+.orange { background-color: var(--orange); }
+.cyan { background-color: var(--cyan); }
+.green { background-color: var(--green); }
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    max-width: 90rem;
+}
+
+
+/* CARD */
+
+.title {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.title,
+.para {
+    color: var(--light-gray);
+}
+.card {
+    padding: 4.6rem;
+}
+
+.enlace {
+    display: inline-block;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    background-color: var(--white);
+    margin-top: 10rem;
+    border-radius: 12rem;
+    transition: all .4s ease;
+}
+
+.orange .enlace { color: var(--orange) }
+.cyan .enlace { color: var(--cyan) }
+.green .enlace { color: var(--green) }
+
+.enlace:hover {
+    color: var(--white);
+    background-color: transparent;
+}
+
+/* SYTLES */
+
+.cards div:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.cards div:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+@media (max-width: 375px) {
+    main {
+        height: auto;
+        margin: 9rem 1.3rem;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .cards div:first-child {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+    .cards div:last-child {
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+    }
+}
+
+@media (max-width: 760px) {
+    .cards {
+        max-width: 95%;
+    }
+}
+
+footer {
+    text-align: center;
+}
